@@ -13,6 +13,10 @@ class Accounts extends CI_Controller
 		$this->lang->load('auth');	
 		$this->load->helper('file');
 	}
+	
+	public function testingGit(){
+		
+	}
 
 	public function payment()
 	{
