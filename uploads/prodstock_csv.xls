@@ -1,0 +1,69 @@
+
+<html>
+<head>
+    <title>Product Stock Report</title>
+</head>
+<body>
+    <table border="1">
+        <thead>            
+            <tr>
+                <td colspan="14" style="background:#330099;color:#ffffff;font-size:16px;">
+                    <center>
+                        <strong>Product Stock Report</strong>                       
+                    </center>
+                 </td>
+            </tr>           
+            <tr>
+                <th>S.N.</th>
+                <th>Category</th>
+                <th>Product</th>
+                <th>HSN/SAC</th>
+                <th>Unit</th>
+                <th>Opening Stock</th>
+                <th>Purchased Qty.</th>
+                <th>Sold Qty.</th>
+                <th>Current Stock</th>
+                <th>Purchase Rate</th>
+                <th>Sale Rate</th>
+                <th>GST</th>
+                <th>GST Included In Rate</th>
+                <th>Remark</th>
+            </tr>
+        </thead>
+        <tbody>
+                            <tr id='row_1'>
+                    <td>1</td>
+                    <td>Gitti</td>  
+                    <td>Chhad 12 Mm</td>  
+                    <td></td>  
+                    <td>Kg.</td>   
+                    <td>0.00</td>                     
+                    <td>100.00</td>                     
+                    <td>20.00</td>                     
+                    <td>80.00</td>                     
+                    <td>60.00</td>   
+                    <td>70.00</td>   
+                    <td>15.00%</td> 
+                    <td>No</td>                       
+                    <td>Testing</td>  
+                </tr> 
+                            <tr id='row_2'>
+                    <td>2</td>
+                    <td>Gitti</td>  
+                    <td>Chhad 10 Mm</td>  
+                    <td></td>  
+                    <td>Kg.</td>   
+                    <td>0.00</td>                     
+                    <td>100.00</td>                     
+                    <td>30.00</td>                     
+                    <td>70.00</td>                     
+                    <td>55.00</td>   
+                    <td>65.00</td>   
+                    <td>15.00%</td> 
+                    <td>No</td>                       
+                    <td>Testing</td>  
+                </tr> 
+                    </tbody>
+     </table>
+    </body>
+</html>

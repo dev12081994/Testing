@@ -1,0 +1,41 @@
+<table border=1 class="table table-bordered table-striped table-condensed mb-none">
+	<thead>
+		<tr>
+			<th>S.N.</th>
+			<th>Type</th>
+			<th>Project</th>
+			<th>Start Date</th>
+			<th>Duration</th>
+			<th>Amount</th>
+			<th>Expense</th>
+			<th>Received</th>
+			<th>Remark</th>
+			<th>Complete Date</th>
+					</tr>
+	</thead>
+	<tbody>
+							<tr id="row_1">
+						<td>1</td>
+						<td>Govt.</td>
+						<td>Sadak Nirman</td>
+						<td>27-11-2019</td>
+						<td>5 Months</td>
+						<td>200000</td>
+						<td>6650</td>
+						<td>8000</td>
+						<td>Testing Project</td>
+						<td>04-11-2019</td>
+
+											</tr>
+								
+			<script type="text/javascript">
+			$(function(){
+				$('.modal-basic').magnificPopup({
+					type: 'inline',
+					preloader: false,
+					modal: true
+				});
+			});
+			</script>
+	</tbody>
+</table>

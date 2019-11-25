@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Purchasing Report</title>
+</head>
+<body>
+	<table border="1">
+        <thead>            
+            <tr>
+                <td colspan="12" style="background:#330099;color:#ffffff;font-size:16px;">
+                    <center>
+                        <strong>Date Wise Material Purchasing Report</strong>                       
+                    </center>
+                 </td>
+            </tr>
+            <tr>
+                <th>S.N.</th>
+                <th>Date</th> 
+                <th>Invoice No.</th> 
+                <th>Party</th>
+                <th>Material</th>
+                <th>Qty.</th>
+                <th>Rate</th>
+                <th>Amount</th>
+                <th>Discount</th>
+                <th>GST Amt.</th>
+                <th>Net</th>  
+                <th>Paid/Credit</th>                                  
+            </tr>
+        </thead>
+        <tbody>
+                        <tr id='row_1'>
+                <td>1</td>
+                <td>22-03-2019</td>
+                <td>12345</td>                  
+                <td>Devendra  Gupta</td>                     
+                <td>Chhad-12-mm</td>                     
+                <td>100.00&nbsp;Kg.</td>                     
+                <td>45.60</td>                     
+                <td>4560</td>                     
+                <td>456</td>                     
+                <td>205.2</td>                     
+                <td>4309.2</td>                     
+                <td class="cen"><span style="color:red">Credit</span></td>  
+            </tr> 
+             
+        </tbody>
+     </table>
+	</body>
+</html>

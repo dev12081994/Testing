@@ -1,0 +1,42 @@
+Queries:
+-----------------------------------------
+
+ALTER TABLE `vehicle` ADD `vrun_qtytype` INT NOT NULL AFTER `vrun_to`;
+
+ALTER TABLE `vehicle` ADD `vrun_qty` FLOAT(9,2) NOT NULL AFTER `vrun_qtytype`;
+ALTER TABLE `vehicle` ADD `vrun_rate` FLOAT(11,2) NOT NULL AFTER `vrun_qty`;
+
+CREATE TABLE `store`.`mas_vehicle_qtytype` ( `vqt_id` INT NOT NULL AUTO_INCREMENT , `vqt_name` INT NOT NULL , `vqt_status` INT NOT NULL , PRIMARY KEY (`vqt_id`)) ENGINE = InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `mas_vehicle_qtytype` CHANGE `vqt_id` `vqt_id` INT(11) NOT NULL AUTO_INCREMENT, CHANGE `vqt_name` `vqt_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `vqt_status` `vqt_status` INT(11) NOT NULL DEFAULT '1';
+
+ALTER TABLE `vehicle` ADD `vrun_paidstatus` INT NOT NULL COMMENT '0 Pending, 1 Partial Paid,2 Paid' AFTER `vrun_remark`;
+
+INSERT INTO `mas_vehicle_qtytype` (`vqt_id`, `vqt_name`, `vqt_status`) VALUES
+(1, 'Trip', 1),
+(2, 'Trali', 1),
+(3, 'Hours', 1),
+(4, 'Minutes', 1);
+
+ALTER TABLE `s_invoice` ADD `inv_transportcharge` FLOAT(9,2) NOT NULL AFTER `inv_gstamt`;
+
+#####################################
+Application:
+
+*******************************************
+Controller: 
+----------------------------------------
+1) VEHICLE.php
+
+
+Old Views: 
+----------------------------------------
+1) vehicle/daily_entry.php
+
+New Views: 
+----------------------------------------
+1) vehicle/daily_entry_srch.php
+
+Old JS: 
+----------------------------------------
+1) assets/javascripts/views/vehicle/daily_entry.js

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Purchasing Report</title>
+</head>
+<body>
+	<table border="1">
+        <thead>            
+            <tr>
+                <td colspan="13" style="background:#330099;color:#ffffff;font-size:16px;">
+                    <center>
+                        <strong>Date Wise Material Purchasing Report</strong>                       
+                    </center>
+                 </td>
+            </tr>
+            <tr>
+                <th>S.N.</th>
+                <th>Date</th> 
+                <th>Invoice No.</th> 
+                <th>Party</th>
+                <th>Material</th>
+                <th>Qty.</th>
+                <th>Rate</th>
+                <th>Amount</th>
+                <th>Disc. On Bill</th>
+                <th>Discount</th>
+                <th>GST Amt.</th>
+                <th>Net</th>  
+                <th>Paid/Credit</th>                                  
+            </tr>
+        </thead>
+        <tbody>
+                        <tr id='row_1'>
+                <td>1</td>
+                <td>22-10-2019</td>
+                <td>INV-001</td>                  
+                <td>vendor  1</td>                     
+                <td>Chhad 12 mm</td>                     
+                <td>100.00&nbsp;Kg.</td>                     
+                <td>70.00</td>                     
+                <td>6300</td>                     
+                <td></td>                     
+                                     
+                <td>700</td>                     
+                <td>0</td>                     
+                <td>6300</td>                     
+                <td class="cen"><span style="color:red">Credit</span></td>  
+            </tr> 
+                        <tr id='row_1'>
+                <td>2</td>
+                <td>22-10-2019</td>
+                <td>INV-001</td>                  
+                <td>vendor  1</td>                     
+                <td>Chhad 10 mm</td>                     
+                <td>100.00&nbsp;Kg.</td>                     
+                <td>65.00</td>                     
+                <td>5850</td>                     
+                <td></td>                     
+                                     
+                <td>650</td>                     
+                <td>0</td>                     
+                <td>5850</td>                     
+                <td class="cen"><span style="color:red">Credit</span></td>  
+            </tr> 
+             
+            <tr>
+                <th colspan="7">Total : </th>
+                <th colspan="1" style="text-align:right">12150</th>
+                <td colspan="1" style="text-align:right">0</td>
+                <th colspan="1" style="text-align:right">1350</th>
+                <th colspan="1" style="text-align:right">0</th>
+                <th colspan="1" style="text-align:right">12150</th>
+                <th colspan="1">&nbsp;</th>
+            </tr>
+        </tbody>
+     </table>
+	</body>
+</html>

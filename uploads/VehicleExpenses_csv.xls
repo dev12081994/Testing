@@ -1,0 +1,28 @@
+<div class="table-responsive">
+	<table border=1 class="table table-bordered table-striped table-condensed mb-none">
+		<thead>
+			<tr>
+				<th>S.N.</th>
+                <th>Entry</th> 
+                <th title="Expense Date">Expense</th> 
+                <th>Vehicle No.</th> 
+                <th>Member Type</th> 
+                <th>Paid To</th> 
+                <th>Ledger</th>                                 
+                <th>Amount</th>
+                <th>Remark</th>
+                			</tr>
+		</thead>
+		<tbody>
+			<tr id='row_2'><td>1</td><td>04-11-2019</td><td>04-11-2019</td><td>407-001</td><td>Other</td><td>Mr. Desiel  Filling</td><td>Desiel Expenses</td><td>2000.00</td><td>Desiel Filling Expense</td></tr><tr><td colspan='7'><strong>Total Amount : </strong></td><td colspan='2'><strong>2000</strong></td></tr>            <script type="text/javascript">
+				$(function(){
+					$('.modal-basic').magnificPopup({
+						type: 'inline',
+						preloader: false,
+						modal: true
+					});
+				});
+			</script>
+		</tbody>
+	</table>
+</div>

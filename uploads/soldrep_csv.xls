@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sales Report</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="7" style="background:#330099;color:#ffffff;font-size:16px;">
+                <center>
+                    <strong>डेली मटेरियल रपोर्ट </strong>                       
+                </center>
+             </td>
+        </tr>
+    </table>
+                <br/>
+            <table border="1">
+                <tr style="background-color: yellow; ">
+                    <th colspan="2">दिनाँक </th>
+                    <th colspan="5" style="text-align: right;">04/11/2019</th>
+                </tr>
+                <tr style="background-color: yellow;">
+                    <th>क्र. </th>
+                    <th>बिल नं.</th> 
+                    <th>पार्टी नाम </th> 
+                    <th>विवरण </th>
+                    <th>मात्रा </th>
+                    <th>उधारी / नगद </th>
+                    <th>चिन्ह </th>
+                </tr>
+                        <tr>
+                <td>1</td>
+                <td>1</td>                  
+                <td>Sadak Nirman</td>                     
+                <td>Chhad 12 mm</td>                     
+                <td>150.00&nbsp;Kg.</td>                       
+                <td class="cen"><span style="color:red">उधारी </span></td>  
+                <td>&nbsp;</td>  
+            </tr> 
+                            <tr>
+                <td>2</td>
+                <td>2</td>                  
+                <td>Cus  1</td>                     
+                <td>Chhad 12 mm</td>                     
+                <td>20.00&nbsp;Kg.</td>                       
+                <td class="cen"><span style="color:green">नगद </span></td>  
+                <td>&nbsp;</td>  
+            </tr> 
+         
+        </table>
+        <br/>
+        <table border="1">
+            <tr style="background-color: yellow; ">
+                <th colspan="8" style="text-align: left;">गोसबारा </th>
+            </tr>
+            <tr style="background-color: yellow; ">
+                <th>क्र. </th>
+                <th>विवरण </th>
+                <th>मात्रा </th>
+                <th>दर </th>
+                <th>राशि  </th>
+                <th>छूट </th>
+                <th>GST</th>
+                <th>नेट </th>
+            </tr>
+             
+            <tr>
+                <td>1</td>
+                <td>Chhad 12 mm</td>
+                <td>170</td>
+                <td style="text-align: right;">70.00</td>
+                <td style="text-align: right;">11900</td>
+                <td style="text-align: right;">0</td>
+                <td style="text-align: right;">0</td>
+                <td style="text-align: right;">11900</td>
+            </tr>
+                        <tr>
+                <th colspan="7" style="text-align: left;">टोटल : </th>
+                <th colspan="1" style="text-align: right;">11900</th>
+            </tr>
+        </table>
+        <br/>
+                      
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<div class="row">
+	<div class="col-md-12">
+		<button type="button" id="perticular" class="mb-xs mt-xs mr-xs btn btn-primary btn-block">
+			<!-- <div style="width:49%;text-align: left !important;">ttt</div> -->	
+			<div class="row">
+				<div class="col-md-6" style="font-size:16px;text-align: left !important;"><span id="memname">Member Name : Project : SADAK NIRMAN</span></div>
+				<div class="col-md-6" style="font-size:16px;text-align: right !important;">Balance : <span id="membal">1350 (Cr.)</span></div>
+			</div>
+		</button>
+	</div>
+</div>
+
+<div class="col-md-12" >	
+	<div class="table-responsive">
+		<table border=1 class="table table-bordered table-striped table-condensed mb-none">
+			<thead>
+				<tr>
+					<th>S.N.</th>
+	                <th>Date</th> 
+	                <th>Bill No</th> 
+	                <th>Remark</th>
+	                <th>Description</th> 
+	                <th>Qty</th> 
+	                <th>Rate</th> 
+	                <th>Discount</th> 
+	                <th>GST</th> 
+	                <th>Transportation</th> 
+	                <th>Round Off</th> 
+	                <th>Amount(Dr)</th> 
+	                <th>Cr</th> 
+	                <th>Balance</th>                                         
+				</tr>
+			</thead>
+			<tbody>
+					                    <tr>
+	                    <td>1</td><td>03-11-2019</td><td>2</td><td>Testing For Purchasing</td><td>Chhad 12 mm</td><td>20.00 Kg.</td><td class='align-right'>70.00</td><td class='align-right'>0 %</td><td class='align-right'>0 %</td><td class='align-right'>250.00</td><td class='align-right'>0.00</td><td class='align-right'>1650</td><td class='align-right'></td><td class='align-right'>1650</td></tr>	                    <tr>
+	                    <td>2</td><td>04-11-2019</td><td></td><td></td><td>Amount Received</td><td>1.00 </td><td class='align-right'>8000.00</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>0</td><td class='align-right'>0</td><td class='align-right'></td><td class='align-right'>8000</td><td class='align-right'>-6350</td></tr>	                    <tr>
+	                    <td>3</td><td>04-11-2019</td><td></td><td>For Labour Payment</td><td>Amount Paid</td><td>1.00 </td><td class='align-right'>5000.00</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>0</td><td class='align-right'>0</td><td class='align-right'>5000</td><td class='align-right'></td><td class='align-right'>-1350</td></tr><tr ><td colspan='11'><strong>Total Amount : </strong></td><td colspan='1' class='align-right'><strong>6650</strong></td><td colspan='1' class='align-right'><strong>8000</strong></td><td colspan='1' class='align-right'><strong>1350 (Cr.)</strong></td></tr>	            <script type="text/javascript">
+	                $(function(){
+
+	                    $('#membal').html('1350 (Cr.)');
+	                    $('.modal-basic').magnificPopup({
+	                        type: 'inline',
+	                        preloader: false,
+	                        modal: true
+	                    });
+	                });
+	            </script>
+	            
+			</tbody>
+		</table>
+	</div>
+</div>

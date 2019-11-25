@@ -1,0 +1,43 @@
+
+<html>
+<head>
+    <title>GST Report</title>
+</head>
+<body>
+    <table border="1">
+        <thead>            
+            <tr>
+                <td colspan="15" style="background:#330099;color:#ffffff;font-size:16px;">
+                    <center>
+                        <strong>GST Report</strong>                       
+                    </center>
+                 </td>
+            </tr>           
+            <tr>
+                <th rowspan="2">S.N.</th>
+                <th rowspan="2">Date</th> 
+                <th rowspan="2">Invoice Type</th> 
+                <th rowspan="2">Invoie No</th>
+                <th rowspan="2">Product</th> 
+                <th rowspan="2">Remark</th> 
+                <th rowspan="2">Amount</th> 
+                <th rowspan="2">GST(%)</th> 
+                <th colspan="3">GST Receive From Customer</th> 
+                <th colspan="3">GST Paid To Vendor</th>
+                <th>(Receive-Paid)</th>                                  
+            </tr>
+            <tr>
+                <th>SGST</th> 
+                <th>CGST</th>  
+                <th>IGST</th>
+                <th>SGST</th> 
+                <th>CGST</th>  
+                <th>IGST</th>
+                <th>Balance </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>21-04-2019</td><td>Purchase</td><td>122</td><td>Chhad 12 Mm</td><td>Testing By Devendra</td><td class='align-right'>13410</td><td>5.00%</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>670.5</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>670.5</td></tr><tr><td>2</td><td>21-04-2019</td><td>Purchase</td><td>122</td><td>Chhad - 8 Mm</td><td>Testing By Devendra</td><td class='align-right'>9000</td><td>5.00%</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>428.57</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>1099.07</td></tr><tr><td>3</td><td>22-04-2019</td><td>Sales</td><td>1</td><td>Chhad - 8 Mm</td><td>Testing By Devendra</td><td class='align-right'>600</td><td>5.00%</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>14.29</td><td class='align-right'>14.29</td><td class='align-right'></td><td class='align-right'>1070.5</td></tr><tr><td>4</td><td>22-04-2019</td><td>Sales</td><td>1</td><td>Chhad 12 Mm</td><td>Testing By Devendra</td><td class='align-right'>750</td><td>5.00%</td><td class='align-right'></td><td class='align-right'></td><td class='align-right'></td><td class='align-right'>18.75</td><td class='align-right'>18.75</td><td class='align-right'></td><td class='align-right'>1033</td></tr><tr><td colspan='6'><strong>Total Amount : </strong></td><td colspan='1' class='align-right'><strong>23760</strong></td><td colspan='1' class='align-right'>&nbsp;</td><td colspan='1' class='align-right'><strong>0</strong></td><td colspan='1' class='align-right'><strong>0</strong></td><td colspan='1' class='align-right'><strong>1099.07</strong></td><td colspan='1' class='align-right'><strong>33.04</strong></td><td colspan='1' class='align-right'><strong>33.04</strong></td><td colspan='1' class='align-right'><strong>0</strong></td><td colspan='1' class='align-right'><strong>1033</strong></td></tr>        </tbody>
+     </table>
+    </body>
+</html>

@@ -1,0 +1,5 @@
+1) 
+Status : Pending
+Queries : 
+	ALTER TABLE `s_sale` ADD `sl_gstinclusive` INT NOT NULL COMMENT '0 exclusive,1 inclusive' AFTER `sl_gstper`;
+	ALTER TABLE `s_stock` ADD `stk_gstinclusive` INT NOT NULL COMMENT '0 exclusive,1 inclusive' AFTER `stk_gstper`;

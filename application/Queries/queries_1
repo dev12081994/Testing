@@ -1,0 +1,55 @@
+Account Table :
+------------------------------------------------------------------------------------------
+
+Status : Done
+Queries : 
+ALTER TABLE `account` ADD `acc_remark` VARCHAR(255) NOT NULL AFTER `acc_onlineid`;
+ALTER TABLE `account` ADD `acc_docs` VARCHAR(255) NOT NULL AFTER `acc_remark`;
+ALTER TABLE `account` CHANGE `acc_mode` `acc_mode` INT(11) NOT NULL COMMENT '1 cash,2 cheque,3 online';
+ALTER TABLE `account` ADD `acc_vochfor` INT NOT NULL COMMENT '1 Customer,2 Vendor,3 Employee,4 Vehicle,5 project ,6 other' AFTER `acc_user`;
+ALTER TABLE `account` CHANGE `acc_gross` `acc_amt` FLOAT(11,2) NOT NULL;
+ALTER TABLE `account` DROP `acc_disc`, DROP `acc_roundoff`, DROP `acc_gstamt`, DROP `acc_gstper`, DROP `acc_tdsper`;
+ALTER TABLE `account` CHANGE `acc_chqno` `acc_chqno` VARCHAR(255) NOT NULL;
+-------------------------------------------------------------------------------------------
+
+Project Table :
+----------------------------------------------------------------------------
+Status : Done
+Queries : 
+
+CREATE TABLE `project` (
+  `proj_id` int(11) NOT NULL,
+  `proj_user` int(11) NOT NULL,
+  `proj_type` int(11) NOT NULL COMMENT '1 govt,2 private',
+  `proj_name` varchar(255) NOT NULL,
+  `proj_startdt` date NOT NULL,
+  `proj_enddt` date NOT NULL,
+  `proj_duration` int(11) NOT NULL,
+  `proj_amt` float(11,2) NOT NULL,
+  `proj_status` int(11) NOT NULL DEFAULT '1',
+  `proj_entrydt` datetime NOT NULL,
+  `proj_remark` TEXT NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+ALTER TABLE `project` ADD PRIMARY KEY (`proj_id`);
+ALTER TABLE `project` MODIFY `proj_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `project` ADD `proj_durtype` INT NOT NULL COMMENT '1 Days,2 Months,3 Year' AFTER `proj_enddt`;
+ALTER TABLE `project` ADD `proj_docs` VARCHAR(255) NOT NULL AFTER `proj_remark`;
+
+-----------------------------------------------------------------------------
+
+s_invoice Table :
+----------------------------------------------------------------------------
+
+Status : Done
+Queries : 
+
+ALTER TABLE `s_invoice` CHANGE `inv_for` `inv_for` INT(11) NOT NULL COMMENT '1 stock,2 sale,3 Employee,4 vehicle,5 project';
+ALTER TABLE `s_invoice` CHANGE `inv_perticular` `inv_perticular` INT(11) NOT NULL COMMENT 'member_id/vehicle_id/project_id'; 
+----------------------------------------------------------------------------
+
+Vehicle Table :
+-----------------------------------------------------------------------------
+
+CREATE TABLE `store`.`vehicle` ( `vrun_date` DATE NOT NULL , `vrun_vid` INT NOT NULL COMMENT 'vehicle number Id' , `vrun_id` INT NOT NULL AUTO_INCREMENT , `vrun_user` INT NOT NULL , `vrun_runstatus` INT NOT NULL , `vrun_meterstart` INT NOT NULL , `vrun_meterstop` INT NOT NULL , `vrun_memtype` INT NOT NULL , `vrun_memid` INT NOT NULL , `vrun_drivid` INT NOT NULL , `vrun_work` VARCHAR(255) NOT NULL , `vrun_from` VARCHAR(255) NOT NULL , `vrun_to` VARCHAR(255) NOT NULL , `vrun_fareamt` FLOAT(11,2) NOT NULL , `vrun_recamt` FLOAT(11,2) NOT NULL COMMENT 'received from customer' , `vrun_docs` VARCHAR(255) NOT NULL , `vrun_remark` VARCHAR(255) NOT NULL , `vrun_status` INT NOT NULL DEFAULT '1' , `vrun_entrydt` DATETIME NOT NULL , PRIMARY KEY (`vrun_id`)) ENGINE = InnoDB;
+-----------------------------------------------------------------------------

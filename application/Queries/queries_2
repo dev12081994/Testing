@@ -1,0 +1,107 @@
+Account Table :
+------------------------------------------------------------------------------------------
+
+Status : pending
+Queries : 
+	ALTER TABLE `account` ADD `acc_sourceid` INT NOT NULL AFTER `acc_vochfor`;
+	ALTER TABLE `account` CHANGE `acc_vochfor` `acc_vochfor` INT(11) NOT NULL COMMENT '1=>Purchase,2=>Sale,3=>Vehicle,4=>Project,5=>Other' ;
+------------------------------------------------------------------------------------------
+
+
+Firm Table :
+------------------------------------------------------------------------------------------
+
+Status : pending
+Queries : 
+	CREATE TABLE `store`.`mas_firm` ( `f_id` INT NOT NULL AUTO_INCREMENT , `f_user` INT NOT NULL , `f_name` VARCHAR(255) NOT NULL , `f_contact` VARCHAR(255) NOT NULL , `f_email` VARCHAR(255) NOT NULL , `f_remark` VARCHAR(255) NOT NULL , `f_status` INT NOT NULL DEFAULT '1' , `f_entrydt` DATETIME NOT NULL , PRIMARY KEY (`f_id`)) ENGINE = InnoDB;
+
+	ALTER TABLE `mas_bankacc` ADD `acc_firm` INT NOT NULL COMMENT 'Firm ID' AFTER `acc_user`;
+------------------------------------------------------------------------------------------- 
+
+Customer Table
+-------------------------------------------------------------------------------------------
+status  :  Pending
+Queries : 
+	ALTER TABLE `mas_members` ADD `c_gstregtype` INT NOT NULL COMMENT 'GST Registration Type' AFTER `c_panno`;
+-------------------------------------------------------------------------------------------
+
+GST-Registration-Type  Table :
+--------------------------------------------
+
+Status : Pending
+Queries : 
+	CREATE TABLE `store`.`mas_gstregtype` ( `grt_id` INT NOT NULL AUTO_INCREMENT , `grt_user` INT NOT NULL , `grt_type` VARCHAR(255) NOT NULL , `grt_status` INT NOT NULL DEFAULT '1' , `grt_entrydt` DATETIME NOT NULL , PRIMARY KEY (`grt_id`)) ENGINE = InnoDB;
+
+----------------------------------------------
+category  Table :
+--------------------------------------------
+
+Status : Pending
+Queries : 
+	ALTER TABLE `mas_category` CHANGE `c_for` `c_for` INT(11) NOT NULL COMMENT '1 product,2 ledger,3 GST';
+	ALTER TABLE `mas_category` ADD `c_taxperc` FLOAT(9,2) NOT NULL AFTER `c_name`;
+
+----------------------------------------------
+Product  Table :
+--------------------------------------------
+
+Status : Pending
+Queries : 
+	ALTER TABLE `mas_product` ADD `prod_purrate` FLOAT(9,2) NOT NULL AFTER `prod_currstock`, ADD `prod_salerate` FLOAT(9,2) NOT NULL AFTER `prod_purrate`, ADD `prod_isgst` INT NOT NULL COMMENT '1 Applicable,2 Not Applicable' AFTER `prod_salerate`, ADD `prod_purgstincl` INT NOT NULL COMMENT '1 included in rate,2 not' AFTER `prod_isgst`, ADD `prod_gstrate` FLOAT(5,2) NOT NULL COMMENT 'GST Percantage' AFTER `prod_purgstincl`;
+	ALTER TABLE `mas_product` ADD `prod_hsn_sac` VARCHAR(255) NOT NULL COMMENT 'HSN/SAC Code' AFTER `prod_name`;
+	ALTER TABLE `mas_product` ADD `prod_openstock` FLOAT(9,2) NOT NULL AFTER `prod_unit`;
+
+----------------------------------------------
+s_invoice  Table :
+--------------------------------------------
+
+Status : Pending
+Queries : 
+	ALTER TABLE `s_invoice` ADD `inv_docs` VARCHAR(255) NOT NULL AFTER `inv_roundoff`;
+	ALTER TABLE `s_invoice` ADD `inv_remark` VARCHAR(255) NOT NULL AFTER `inv_docs`;
+	ALTER TABLE `s_invoice` ADD `inv_location` INT NOT NULL COMMENT '1 in city,2 out of city' AFTER `inv_billno`;
+----------------------------------------------
+Project  Table :
+--------------------------------------------
+
+Status : Pending
+Queries : 
+	ALTER TABLE `project` ADD `prod_isdone` INT NOT NULL COMMENT '1 for done' AFTER `proj_docs`, ADD `prod_doneuser` INT NOT NULL AFTER `prod_isdone`, ADD `prod_donedt` DATE NOT NULL AFTER `prod_doneuser`;
+----------------------------------------------
+
+
+Queries For Hindi Font : 
+------------------------------------
+Status : Pending 
+Queries : 
+	ALTER TABLE `account` CHANGE `acc_remark` `acc_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_bank` CHANGE `bank_name` `bank_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `bank_short` `bank_short` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_category` CHANGE `c_name` `c_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_remark` `c_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_city` CHANGE `city_name` `city_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_department` CHANGE `dep_name` `dep_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `dep_remark` `dep_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_designation` CHANGE `desig_name` `desig_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `desig_remark` `desig_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_firm` CHANGE `f_name` `f_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `f_remark` `f_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_members` CHANGE `c_salutation` `c_salutation` VARCHAR(15) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_firstname` `c_firstname` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_middlename` `c_middlename` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_lastname` `c_lastname` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_gardiantype` `c_gardiantype` VARCHAR(5) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_gardianname` `c_gardianname` VARCHAR(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_address` `c_address` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_remark` `c_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `c_branch` `c_branch` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_product` CHANGE `prod_name` `prod_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `prod_hsn_sac` `prod_hsn_sac` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'HSN/SAC Code', CHANGE `prod_unit` `prod_unit` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `prod_remark` `prod_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_subcategory` CHANGE `sc_name` `sc_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `sc_remark` `sc_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_vehicle` CHANGE `v_remark` `v_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_vehicletype` CHANGE `vt_name` `vt_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `mas_village` CHANGE `v_name` `v_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `v_remark` `v_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `project` CHANGE `proj_name` `proj_name` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `proj_remark` `proj_remark` TEXT CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `s_invoice` CHANGE `inv_remark` `inv_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
+
+	ALTER TABLE `vehicle` CHANGE `vrun_work` `vrun_work` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `vrun_from` `vrun_from` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `vrun_to` `vrun_to` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL, CHANGE `vrun_remark` `vrun_remark` VARCHAR(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL;
